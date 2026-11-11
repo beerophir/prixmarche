@@ -1,0 +1,222 @@
+[
+{
+  "model": "prix.marche",
+  "pk": "MFD",
+  "fields": {
+    "nom_marche": "Marché du Mfoundi",
+    "ville": "Yaoundé"
+  }
+},
+{
+  "model": "prix.marche",
+  "pk": "MOK",
+  "fields": {
+    "nom_marche": "Marché Mokolo",
+    "ville": "Yaoundé"
+  }
+},
+{
+  "model": "prix.marche",
+  "pk": "NKL",
+  "fields": {
+    "nom_marche": "Marché de Nkolbisson",
+    "ville": "Yaoundé"
+  }
+},
+{
+  "model": "prix.produit",
+  "pk": "MAI",
+  "fields": {
+    "libelle": "Maïs",
+    "unite": "kg"
+  }
+},
+{
+  "model": "prix.produit",
+  "pk": "MAN",
+  "fields": {
+    "libelle": "Manioc",
+    "unite": "kg"
+  }
+},
+{
+  "model": "prix.produit",
+  "pk": "PLA",
+  "fields": {
+    "libelle": "Plantain",
+    "unite": "regime"
+  }
+},
+{
+  "model": "prix.produit",
+  "pk": "TOM",
+  "fields": {
+    "libelle": "Tomate",
+    "unite": "tas"
+  }
+},
+{
+  "model": "prix.enqueteur",
+  "pk": "ENQ001",
+  "fields": {
+    "nom_enq": "Amina Bello",
+    "telephone": "699000001"
+  }
+},
+{
+  "model": "prix.enqueteur",
+  "pk": "ENQ002",
+  "fields": {
+    "nom_enq": "Paul Mvondo",
+    "telephone": "677000002"
+  }
+},
+{
+  "model": "prix.affectation",
+  "pk": 1,
+  "fields": {
+    "enqueteur": "ENQ001",
+    "marche": "MOK",
+    "date_debut": "2026-09-01"
+  }
+},
+{
+  "model": "prix.affectation",
+  "pk": 2,
+  "fields": {
+    "enqueteur": "ENQ001",
+    "marche": "MFD",
+    "date_debut": "2026-09-03"
+  }
+},
+{
+  "model": "prix.affectation",
+  "pk": 3,
+  "fields": {
+    "enqueteur": "ENQ002",
+    "marche": "NKL",
+    "date_debut": "2026-09-05"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 1,
+  "fields": {
+    "date_releve": "2026-10-20",
+    "prix": 650,
+    "produit": "MAN",
+    "marche": "MOK",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 2,
+  "fields": {
+    "date_releve": "2026-10-20",
+    "prix": 1800,
+    "produit": "PLA",
+    "marche": "MFD",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 3,
+  "fields": {
+    "date_releve": "2026-10-20",
+    "prix": 500,
+    "produit": "TOM",
+    "marche": "MOK",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 4,
+  "fields": {
+    "date_releve": "2026-10-20",
+    "prix": 700,
+    "produit": "MAI",
+    "marche": "NKL",
+    "enqueteur": "ENQ002"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 5,
+  "fields": {
+    "date_releve": "2026-10-27",
+    "prix": 700,
+    "produit": "MAN",
+    "marche": "MOK",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 6,
+  "fields": {
+    "date_releve": "2026-10-27",
+    "prix": 1900,
+    "produit": "PLA",
+    "marche": "MFD",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 7,
+  "fields": {
+    "date_releve": "2026-10-27",
+    "prix": 450,
+    "produit": "TOM",
+    "marche": "MOK",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 8,
+  "fields": {
+    "date_releve": "2026-10-27",
+    "prix": 680,
+    "produit": "MAN",
+    "marche": "NKL",
+    "enqueteur": "ENQ002"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 9,
+  "fields": {
+    "date_releve": "2026-11-03",
+    "prix": 720,
+    "produit": "MAN",
+    "marche": "MOK",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 10,
+  "fields": {
+    "date_releve": "2026-11-03",
+    "prix": 2000,
+    "produit": "PLA",
+    "marche": "MFD",
+    "enqueteur": "ENQ001"
+  }
+},
+{
+  "model": "prix.releve",
+  "pk": 11,
+  "fields": {
+    "date_releve": "2026-11-11",
+    "prix": 600,
+    "produit": "TOM",
+    "marche": "MOK",
+    "enqueteur": "ENQ001"
+  }
+}
+]

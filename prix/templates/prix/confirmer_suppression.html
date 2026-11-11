@@ -1,0 +1,15 @@
+{% extends "prix/base.html" %}
+{% block titre %}{{ titre }} - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>{{ titre }}</h2>
+<p>Confirmez-vous la suppression de <strong>{{ objet }}</strong> ?<br>
+Cette action est irréversible.</p>
+<form method="post">
+  {% csrf_token %}
+  <p>
+    <button type="submit" class="bouton">Supprimer</button>
+    <a href="{% url retour %}">Annuler</a>
+  </p>
+</form>
+{% endblock %}

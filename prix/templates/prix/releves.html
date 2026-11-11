@@ -1,0 +1,30 @@
+{% extends "prix/base.html" %}
+{% block titre %}Relevés - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>Liste des relevés</h2>
+<a class="bouton" href="{% url 'prix:releve_creer' %}">Saisir un relevé</a>
+<table>
+  <tr>
+    <th>N°</th><th>Date</th><th>Produit</th><th>Marché</th>
+    <th>Enquêteur</th><th>Prix</th><th>Actions</th>
+  </tr>
+  {% for r in lignes %}
+  <tr>
+    <td>{{ r.num_releve }}</td>
+    <td>{{ r.date_releve|date:"d/m/Y" }}</td>
+    <td>{{ r.produit.libelle }}</td>
+    <td>{{ r.marche.nom_marche }}</td>
+    <td>{{ r.enqueteur.nom_enq }}</td>
+    <td>{{ r.prix }} FCFA</td>
+    <td>
+      <a href="{% url 'prix:releve_detail' r.pk %}">Consulter</a> ·
+      <a href="{% url 'prix:releve_modifier' r.pk %}">Modifier</a> ·
+      <a href="{% url 'prix:releve_supprimer' r.pk %}">Supprimer</a>
+    </td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="7">Aucun relevé.</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

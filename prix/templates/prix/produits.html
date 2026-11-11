@@ -1,0 +1,23 @@
+{% extends "prix/base.html" %}
+{% block titre %}Produits - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>Liste des produits</h2>
+<a class="bouton" href="{% url 'prix:produit_creer' %}">Ajouter un produit</a>
+<table>
+  <tr><th>Code</th><th>Libellé</th><th>Unité</th><th>Actions</th></tr>
+  {% for p in lignes %}
+  <tr>
+    <td>{{ p.code_produit }}</td>
+    <td>{{ p.libelle }}</td>
+    <td>{{ p.get_unite_display }}</td>
+    <td>
+      <a href="{% url 'prix:produit_modifier' p.pk %}">Modifier</a> ·
+      <a href="{% url 'prix:produit_supprimer' p.pk %}">Supprimer</a>
+    </td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="4">Aucun produit.</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

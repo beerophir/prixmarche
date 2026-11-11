@@ -1,0 +1,17 @@
+{% extends "prix/base.html" %}
+{% block titre %}Relevé n° {{ releve.num_releve }} - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>Relevé n° {{ releve.num_releve }}</h2>
+<table>
+  <tr><th>Date d'observation</th><td>{{ releve.date_releve|date:"d/m/Y" }}</td></tr>
+  <tr><th>Produit</th><td>{{ releve.produit }}</td></tr>
+  <tr><th>Marché</th><td>{{ releve.marche }}</td></tr>
+  <tr><th>Enquêteur</th><td>{{ releve.enqueteur }}</td></tr>
+  <tr><th>Prix observé</th><td>{{ releve.prix }} FCFA</td></tr>
+</table>
+<p>
+  <a class="bouton" href="{% url 'prix:releve_modifier' releve.pk %}">Modifier</a>
+  <a href="{% url 'prix:releves' %}">Retour à la liste</a>
+</p>
+{% endblock %}

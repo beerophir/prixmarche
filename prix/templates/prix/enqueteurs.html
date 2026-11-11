@@ -1,0 +1,23 @@
+{% extends "prix/base.html" %}
+{% block titre %}Enquêteurs - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>Liste des enquêteurs</h2>
+<a class="bouton" href="{% url 'prix:enqueteur_creer' %}">Ajouter un enquêteur</a>
+<table>
+  <tr><th>Matricule</th><th>Nom</th><th>Téléphone</th><th>Actions</th></tr>
+  {% for e in lignes %}
+  <tr>
+    <td>{{ e.matricule }}</td>
+    <td>{{ e.nom_enq }}</td>
+    <td>{{ e.telephone }}</td>
+    <td>
+      <a href="{% url 'prix:enqueteur_modifier' e.pk %}">Modifier</a> ·
+      <a href="{% url 'prix:enqueteur_supprimer' e.pk %}">Supprimer</a>
+    </td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="4">Aucun enquêteur.</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

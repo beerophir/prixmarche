@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titre %}PrixMarché{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'prix/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>PrixMarché</h1>
+    <p>Observatoire des prix des marchés · ISSEA</p>
+  </header>
+
+  {% include "prix/menu.html" %}
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}<li>{{ message }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  <main>{% block contenu %}{% endblock %}</main>
+
+  <footer>ISSEA · AS3 · Programmation Web en Python · 2026-2027</footer>
+</body>
+</html>

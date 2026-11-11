@@ -1,0 +1,15 @@
+{% extends "prix/base.html" %}
+{% block titre %}Accueil - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>Bienvenue dans PrixMarché</h2>
+<p>Collecte et consultation des prix des produits vivriers sur les marchés.</p>
+
+<section class="tableau-bord">
+  <article><span class="chiffre">{{ compteurs.produits }}</span>Produits</article>
+  <article><span class="chiffre">{{ compteurs.marches }}</span>Marchés</article>
+  <article><span class="chiffre">{{ compteurs.enqueteurs }}</span>Enquêteurs</article>
+  <article><span class="chiffre">{{ compteurs.affectations }}</span>Affectations</article>
+  <article><span class="chiffre">{{ compteurs.releves }}</span>Relevés</article>
+</section>
+{% endblock %}

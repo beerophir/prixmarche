@@ -1,0 +1,23 @@
+{% extends "prix/base.html" %}
+{% block titre %}Affectations - PrixMarché{% endblock %}
+
+{% block contenu %}
+<h2>Liste des affectations</h2>
+<a class="bouton" href="{% url 'prix:affectation_creer' %}">Ajouter une affectation</a>
+<table>
+  <tr><th>Enquêteur</th><th>Marché</th><th>Date de début</th><th>Actions</th></tr>
+  {% for a in lignes %}
+  <tr>
+    <td>{{ a.enqueteur }}</td>
+    <td>{{ a.marche }}</td>
+    <td>{{ a.date_debut|date:"d/m/Y" }}</td>
+    <td>
+      <a href="{% url 'prix:affectation_modifier' a.pk %}">Modifier</a> ·
+      <a href="{% url 'prix:affectation_supprimer' a.pk %}">Supprimer</a>
+    </td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="4">Aucune affectation.</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}
