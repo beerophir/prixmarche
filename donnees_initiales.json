@@ -3,31 +3,31 @@
   "model": "prix.marche",
   "pk": "MFD",
   "fields": {
-    "nom_marche": "Marché du Mfoundi",
-    "ville": "Yaoundé"
+    "nom_marche": "MarchÃ© du Mfoundi",
+    "ville": "YaoundÃ©"
   }
 },
 {
   "model": "prix.marche",
   "pk": "MOK",
   "fields": {
-    "nom_marche": "Marché Mokolo",
-    "ville": "Yaoundé"
+    "nom_marche": "MarchÃ© Mokolo",
+    "ville": "YaoundÃ©"
   }
 },
 {
   "model": "prix.marche",
   "pk": "NKL",
   "fields": {
-    "nom_marche": "Marché de Nkolbisson",
-    "ville": "Yaoundé"
+    "nom_marche": "MarchÃ© de Nkolbisson",
+    "ville": "YaoundÃ©"
   }
 },
 {
   "model": "prix.produit",
   "pk": "MAI",
   "fields": {
-    "libelle": "Maïs",
+    "libelle": "MaÃ¯s",
     "unite": "kg"
   }
 },

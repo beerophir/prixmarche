@@ -137,3 +137,6 @@ if not DEBUG:
     CSRF_TRUSTED_ORIGINS = [f"https://{hote}" for hote in ALLOWED_HOSTS]
 
 ##CSRF_TRUSTED_ORIGINS indique à Django de quelles adresses il accepte les formulaires
+# L'application n'envoie aucun courriel : aucun backend SMTP n'est configuré.
+# Le contrôle de déploiement correspondant est donc neutralisé en connaissance de cause.
+SILENCED_SYSTEM_CHECKS = ["mail.E001"]
