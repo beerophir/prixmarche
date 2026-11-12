@@ -1,4 +1,5 @@
 # PrixMarché
+**Site en ligne :** https://beerophir.pythonanywhere.com
 
 Application Django de suivi des prix des produits vivriers sur les marchés.
 
@@ -104,4 +105,4 @@ disproportionné pour un déploiement pédagogique temporaire.
 
 Conformément à la charte du cours, l'usage de l'IA est déclaré : le projet a été
 construit pas à pas avec l'assistance d'un agent conversationnel, à partir de
-l'énoncé du TP. Chaque fichier a été relu, exécuté et testé.
+l'énoncé du TP et du cours. Chaque fichier a été relu, exécuté et testé.
